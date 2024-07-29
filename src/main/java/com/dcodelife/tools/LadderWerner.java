@@ -1,6 +1,8 @@
 package com.dcodelife.tools;
 
-public class LadderWerner implements Tool{
+import java.math.BigDecimal;
+
+public class LadderWerner implements Tool {
     @Override
     public String getToolCode() {
         return "LADW";
@@ -17,22 +19,22 @@ public class LadderWerner implements Tool{
     }
 
     @Override
-    public float getDailyCharge() {
-        return 1.99F;
+    public BigDecimal getDailyCharge() {
+        return new BigDecimal("1.99");
     }
 
     @Override
-    public boolean getWeekDayCharge() {
+    public boolean isWeekDayCharge() {
         return true;
     }
 
     @Override
-    public boolean getWeekEndCharge() {
+    public boolean isWeekEndCharge() {
         return true;
     }
 
     @Override
-    public boolean getHolidayCharge() {
+    public boolean isHolidayCharge() {
         return false;
     }
 }

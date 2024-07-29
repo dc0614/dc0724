@@ -1,6 +1,8 @@
 package com.dcodelife.tools;
 
-public class JackHRidgid implements Tool{
+import java.math.BigDecimal;
+
+public class JackHRidgid implements Tool {
     @Override
     public String getToolCode() {
         return "JAKR";
@@ -17,22 +19,22 @@ public class JackHRidgid implements Tool{
     }
 
     @Override
-    public float getDailyCharge() {
-        return 2.99F;
+    public BigDecimal getDailyCharge() {
+        return new BigDecimal("2.99");
     }
 
     @Override
-    public boolean getWeekDayCharge() {
+    public boolean isWeekDayCharge() {
         return true;
     }
 
     @Override
-    public boolean getWeekEndCharge() {
+    public boolean isWeekEndCharge() {
         return false;
     }
 
     @Override
-    public boolean getHolidayCharge() {
+    public boolean isHolidayCharge() {
         return false;
     }
 }

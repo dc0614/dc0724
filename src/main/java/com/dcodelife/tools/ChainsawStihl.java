@@ -1,6 +1,8 @@
 package com.dcodelife.tools;
 
-public class ChainsawStihl implements Tool{
+import java.math.BigDecimal;
+
+public class ChainsawStihl implements Tool {
     @Override
     public String getToolCode() {
         return "CHNS";
@@ -17,22 +19,22 @@ public class ChainsawStihl implements Tool{
     }
 
     @Override
-    public float getDailyCharge() {
-        return 1.49F;
+    public BigDecimal getDailyCharge() {
+        return new BigDecimal("1.49");
     }
 
     @Override
-    public boolean getWeekDayCharge() {
+    public boolean isWeekDayCharge() {
         return true;
     }
 
     @Override
-    public boolean getWeekEndCharge() {
+    public boolean isWeekEndCharge() {
         return false;
     }
 
     @Override
-    public boolean getHolidayCharge() {
+    public boolean isHolidayCharge() {
         return true;
     }
 }
